@@ -1,0 +1,163 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    color: hsl(229, 6%, 66%);
+    font-size: 15px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    padding: 4em 2em 0.5em 2em;
+    background-color: hsl(0, 0%, 98%);
+}
+
+img, svg {
+    display: block;
+    max-inline-size: 100%;
+}
+
+p, h1, h2 {
+    overflow-wrap: break-word;
+}
+
+header {
+    padding-bottom: 2em;
+    max-width: 400px;
+    margin: auto;
+}
+
+h1 {
+   font-weight: 200;
+   font-size: 1.5rem;
+   margin: auto;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+p {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.dark {
+    color: hsl(234, 12%, 34%);
+}
+
+main {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.card {
+    margin: auto;
+    border-radius: 6px;
+    box-shadow: 1px 10px 10px hsl(229, 6%, 66%);
+    background-color: white;
+    padding: 2em;
+    text-align: start;
+    position: relative;
+    width: 320px;
+   
+}
+
+.card > p {
+    margin-bottom: 2.5em;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+}
+
+.green {
+    border-top: 4px solid hsl(180, 62%, 55%);
+}
+.pink {
+    border-top: 4px solid hsl(0, 78%, 62%);
+}
+.orange {
+    border-top: 4px solid hsl(34, 97%, 64%);
+}
+.blue {
+    border-top: 4px solid hsl(212, 86%, 64%);
+}
+
+
+@media (min-width: 500px) {
+    main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 7em;
+    }
+}
+
+
+@media (min-width: 900px) {
+    body {
+        height: 100vw;
+        overflow: hidden;
+        padding: 0;
+    }
+    header {
+        padding-top: 2em;
+        padding-bottom: 1em;
+        max-width: 600px;
+    }
+
+    header > p {
+        margin-bottom: 1em;
+    }
+    main {
+        margin: 0 auto 1em auto;
+        height: 30vw;
+        width: 80%;
+        display: grid;
+        grid-template-columns: 320px 320px 320px;
+        grid-template-rows: 5% 40% 40% 5%;
+        justify-content: center;
+        align-items: center;
+        gap: 5px 30px;
+    }
+
+    
+    #red {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+    }
+
+    #orange {
+        grid-column: 2 / 3;
+        grid-row: 3 / 5;
+    }
+
+    #green {
+        grid-column: 1 / 2;
+        grid-row: 2 / 4;
+    }
+
+    #blue {
+        grid-column: 3 / 4;
+        grid-row: 2 / 4;
+    }
+
+    .attribution  {
+        margin: 0;
+    }
+}
+
